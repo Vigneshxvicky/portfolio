@@ -94,12 +94,12 @@ function App() {
               and modern web technologies. Passionate about creating scalable, beautiful applications that make a difference.
             </motion.p>
             <motion.div className="hero-cta" variants={itemVariants}>
-              <motion.button className="cta-primary" whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 245, 255, 0.3)" }} whileTap={{ scale: 0.95 }}>
+              <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 245, 255, 0.3)" }} whileTap={{ scale: 0.95 }}>
                 <FaRocket /> View My Work
-              </motion.button>
-              <motion.button className="cta-secondary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              </motion.a>
+              <motion.a href="/resume.pdf" download="Vignesh_Resume.pdf" className="cta-secondary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Download CV
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
@@ -107,11 +107,11 @@ function App() {
         {/* Floating Stats */}
         <motion.div className="floating-stats" variants={itemVariants}>
           <motion.div className="stat-card" whileHover={{ scale: 1.05, y: -5 }}>
-            <span className="stat-number">50+</span>
+            <span className="stat-number">20+</span>
             <span className="stat-label">Projects</span>
           </motion.div>
           <motion.div className="stat-card" whileHover={{ scale: 1.05, y: -5 }}>
-            <span className="stat-number">2+</span>
+            <span className="stat-number">1+</span>
             <span className="stat-label">Years Experience</span>
           </motion.div>
           <motion.div className="stat-card" whileHover={{ scale: 1.05, y: -5 }}>
@@ -223,7 +223,7 @@ function App() {
             </div>
             <motion.div className="projects-showcase" variants={containerVariants} initial="hidden" whileInView="visible">
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image">
+                <div className="project-image portfolio-bg">
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
@@ -240,7 +240,7 @@ function App() {
                 </div>
               </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image">
+                <div className="project-image java-skill-bee-bg">
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
@@ -257,14 +257,14 @@ function App() {
                 </div>
               </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image">
+                <div className="project-image simon-game-bg">
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
                 </div>
                 <div className="project-content">
                   <h3>Simon Game</h3>
-                  <p>Interactive memory game with sound sequences and progressive difficulty.</p>
+                  <p>Classic memory game featuring four colored buttons with sound sequences and progressive difficulty levels.</p>
                   <div className="project-tech">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -324,10 +324,10 @@ function App() {
                 Ready to create something amazing together? Let's discuss your next project!
               </motion.p>
               <motion.div className="contact-links" variants={itemVariants}>
-                <motion.a href="mailto:vignesh@example.com" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
+                <motion.a href="mailto:vignesh25vic@gmail.com" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
                   Email Me
                 </motion.a>
-                <motion.a href="https://linkedin.com/in/vignesh" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
+                <motion.a href="https://www.linkedin.com/in/vignesh-k-b3b910346" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
                   LinkedIn
                 </motion.a>
               </motion.div>
