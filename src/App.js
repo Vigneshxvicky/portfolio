@@ -58,7 +58,7 @@ function App() {
       <motion.nav className="modern-nav" initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
         <motion.div className="nav-brand" whileHover={{ scale: 1.1 }}>
           <FaCode className="brand-icon" />
-          <span className="brand-text">Vignesh</span>
+          <span className="brand-text">Vigneshxvicky</span>
         </motion.div>
         <div className="nav-links">
           <motion.a href="#about" whileHover={{ scale: 1.1, color: "#00f5ff" }}>About</motion.a>
@@ -329,6 +329,10 @@ function App() {
                 </motion.a>
                 <motion.a href="https://www.linkedin.com/in/vignesh-k-b3b910346" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
                   LinkedIn
+                </motion.a>
+                <motion.a href="https://github.com/Vigneshxvicky" className="contact-link" whileHover={{ scale: 1.05, y: -5 }}>
+                  <SiGithub style={{ marginRight: '8px' }} />
+                  GitHub
                 </motion.a>
               </motion.div>
             </motion.div>
