@@ -130,6 +130,15 @@
   color: var(--accent-color);
 }
 
+.brand-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}
+
 .brand-icon {
   font-size: 1.5rem;
 }
@@ -310,6 +319,9 @@
 .hero-cta {
   display: flex;
   gap: 20px;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 40px;
 }
 
 .cta-primary,
@@ -325,6 +337,8 @@
   gap: 10px;
   transition: all 0.3s ease;
   text-decoration: none;
+  position: relative;
+  z-index: 101;
 }
 
 .cta-primary {
@@ -349,6 +363,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 40px;
+  padding-top: 40px;
 }
 
 .stat-card {
@@ -544,8 +559,8 @@
 /* Skills Showcase */
 .skills-showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .skill-category {
@@ -597,6 +612,15 @@
   color: var(--accent-color);
 }
 
+.skill-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}
+
 /* Projects Showcase */
 .projects-showcase {
   display: grid;
@@ -611,6 +635,30 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.project-item.featured-project {
+  border: 2px solid var(--accent-color);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 245, 255, 0.05) 0%,
+    rgba(102, 126, 234, 0.05) 100%
+  );
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+}
+
+.project-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #00f5ff, #667eea);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3);
 }
 
 .project-item:hover {
@@ -630,6 +678,17 @@
   overflow: hidden;
 }
 
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-img {
+  transform: scale(1.1);
+}
+
 .project-image.portfolio-bg {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -640,6 +699,29 @@
 
 .project-image.simon-game-bg {
   background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.project-image.cybersecurity-bg {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.project-image.cybersecurity-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #00ff88, #00ccff);
+  opacity: 0.1;
+  animation: securityPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes securityPulse {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.3;
+  }
 }
 
 .project-overlay {
@@ -945,6 +1027,7 @@
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 40px;
   }
 
   .stat-card {

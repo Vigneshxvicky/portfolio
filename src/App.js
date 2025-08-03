@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import gradientBg from './gradient-bg.json';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaDatabase, FaAward, FaCode, FaRocket } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiRedux, SiMongodb, SiMysql, SiExpress, SiGithub } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaDatabase, FaAward, FaCode, FaRocket, FaShieldAlt, FaLock, FaBug, FaPython } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiRedux, SiMongodb, SiMysql, SiExpress, SiGithub, SiKalilinux, SiMetasploit, SiPython } from 'react-icons/si';
 
 function App() {
   useEffect(() => {
@@ -57,8 +57,8 @@ function App() {
       {/* Modern Navigation */}
       <motion.nav className="modern-nav" initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
         <motion.div className="nav-brand" whileHover={{ scale: 1.1 }}>
-          <FaCode className="brand-icon" />
-          <span className="brand-text">Vigneshxvicky</span>
+          <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vigneshxvicky" className="brand-avatar" />
+          <span className="brand-text">Vignesh</span>
         </motion.div>
         <div className="nav-links">
           <motion.a href="#about" whileHover={{ scale: 1.1, color: "#00f5ff" }}>About</motion.a>
@@ -79,7 +79,7 @@ function App() {
               <div className="ring ring-3"></div>
             </div>
             <motion.div className="avatar-image" whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-              <img src="/ghibli-portrait.png.jpg" alt="Vignesh - Full Stack Developer" />
+              <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vignesh - Full Stack Developer" />
             </motion.div>
           </motion.div>
           
@@ -91,7 +91,8 @@ function App() {
             </motion.h1>
             <motion.p className="hero-description" variants={itemVariants}>
               Crafting digital experiences with <span className="highlight">React</span>, <span className="highlight">Node.js</span>, 
-              and modern web technologies. Passionate about creating scalable, beautiful applications that make a difference.
+              and modern web technologies. Also passionate about <span className="highlight">cybersecurity</span> and <span className="highlight">ethical hacking</span>, 
+              creating scalable, secure applications that make a difference.
             </motion.p>
             <motion.div className="hero-cta" variants={itemVariants}>
               <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 245, 255, 0.3)" }} whileTap={{ scale: 0.95 }}>
@@ -203,11 +204,23 @@ function App() {
                 <div className="skills-grid">
                   <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><FaNodeJs /><span>Node.js</span></motion.div>
                   <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><SiExpress /><span>Express</span></motion.div>
-                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><SiMongodb /><span>MongoDB</span></motion.div>
-                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><SiMysql /><span>MySQL</span></motion.div>
-                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><FaDatabase /><span>REST APIs</span></motion.div>
-                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><FaGitAlt /><span>Git</span></motion.div>
-                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><SiGithub /><span>GitHub</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><SiPython /><span>Python</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><SiMongodb /><span>MongoDB</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><SiMysql /><span>MySQL</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><FaDatabase /><span>REST APIs</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><FaGitAlt /><span>Git</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><SiGithub /><span>GitHub</span></motion.div>
+                </div>
+              </motion.div>
+              <motion.div className="skill-category" variants={itemVariants}>
+                <h3 className="category-title">Cybersecurity</h3>
+                <div className="skills-grid">
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><FaShieldAlt /><span>Ethical Hacking</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><FaBug /><span>Penetration Testing</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><FaLock /><span>Security Assessment</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><SiKalilinux /><span>Kali Linux</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: 5 }}><SiMetasploit /><span>Metasploit</span></motion.div>
+                  <motion.div className="skill-item" whileHover={{ scale: 1.1, rotate: -5 }}><FaDatabase /><span>Vulnerability Assessment</span></motion.div>
                 </div>
               </motion.div>
             </motion.div>
@@ -222,8 +235,30 @@ function App() {
               </h2>
             </div>
             <motion.div className="projects-showcase" variants={containerVariants} initial="hidden" whileInView="visible">
+              <motion.div className="project-item featured-project" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/excel-visualizer-screenshot.jpg`} alt="Excel Visualizer Project" className="project-img" />
+                  <div className="project-overlay">
+                    <FaRocket className="overlay-icon" />
+                  </div>
+                  <div className="project-badge">Featured Project</div>
+                </div>
+                <div className="project-content">
+                  <h3>Excel Analytics Platform</h3>
+                  <p>A comprehensive full-stack data visualization platform for Excel file analysis with advanced charts and analytics. Real-time internship project built with MERN stack.</p>
+                  <div className="project-tech">
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Chart.js</span>
+                  </div>
+                  <a href="https://excel-analytics-platform-frontend.onrender.com/dashboard" className="project-link">View Live Project</a>
+                </div>
+              </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image portfolio-bg">
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/portfolio-screenshot.jpg`} alt="Portfolio Website Project" className="project-img" />
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
@@ -236,11 +271,31 @@ function App() {
                     <span>Framer Motion</span>
                     <span>CSS3</span>
                   </div>
-                  <a href="https://vignesh-portfolios.netlify.app/" className="project-link">View Project</a>
+                  <a href="http://vigneshk.me/portfolio/" className="project-link">View Project</a>
                 </div>
               </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image java-skill-bee-bg">
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/studyhub-screenshot.jpg`} alt="StudyHub Learning Platform" className="project-img" />
+                  <div className="project-overlay">
+                    <FaRocket className="overlay-icon" />
+                  </div>
+                </div>
+                <div className="project-content">
+                  <h3>StudyHub Learning Platform</h3>
+                  <p>Comprehensive learning platform for new developers with multiple learning paths including Full Stack, Data Science, and AI/ML tracks.</p>
+                  <div className="project-tech">
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                  </div>
+                  <a href="https://student-guide-jazr.onrender.com/app" className="project-link">View Live Project</a>
+                </div>
+              </motion.div>
+              <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/java-skill-bee.jpg`} alt="Java Skill Bee Project" className="project-img" />
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
@@ -257,7 +312,8 @@ function App() {
                 </div>
               </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
-                <div className="project-image simon-game-bg">
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/simon-game-screenshot.jpg`} alt="Simon Game Project" className="project-img" />
                   <div className="project-overlay">
                     <FaCode className="overlay-icon" />
                   </div>
@@ -271,6 +327,44 @@ function App() {
                     <span>JavaScript</span>
                   </div>
                   <a href="https://simon-gms.netlify.app/" className="project-link">View Project</a>
+                </div>
+              </motion.div>
+              <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/openport-scanner-screenshot.jpg`} alt="OpenPort Scanner Tool" className="project-img" />
+                  <div className="project-overlay">
+                    <FaShieldAlt className="overlay-icon" />
+                  </div>
+                </div>
+                <div className="project-content">
+                  <h3>OpenPort Scanner</h3>
+                  <p>Custom Python-based port scanning tool for network security assessment and vulnerability analysis. Built during ethical hacking studies.</p>
+                  <div className="project-tech">
+                    <span>Python</span>
+                    <span>Socket Programming</span>
+                    <span>Network Security</span>
+                    <span>Ethical Hacking</span>
+                  </div>
+                  <a href="#" className="project-link">View Code</a>
+                </div>
+              </motion.div>
+              <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
+                <div className="project-image">
+                  <img src={`${process.env.PUBLIC_URL}/ping-sweeper-screenshot.jpg`} alt="Ping Sweeper Tool" className="project-img" />
+                  <div className="project-overlay">
+                    <FaShieldAlt className="overlay-icon" />
+                  </div>
+                </div>
+                <div className="project-content">
+                  <h3>Ping Sweeper</h3>
+                  <p>Network discovery tool that performs ping sweeps to identify active hosts within specified IP ranges. Essential for network reconnaissance and security assessment.</p>
+                  <div className="project-tech">
+                    <span>Python</span>
+                    <span>ICMP Protocol</span>
+                    <span>Network Discovery</span>
+                    <span>Security Assessment</span>
+                  </div>
+                  <a href="#" className="project-link">View Code</a>
                 </div>
               </motion.div>
             </motion.div>
@@ -287,7 +381,7 @@ function App() {
             <motion.div className="certificates-showcase" variants={containerVariants} initial="hidden" whileInView="visible">
               <motion.div className="certificate-item" variants={itemVariants} whileHover={{ scale: 1.02, rotateY: 5 }}>
                 <div className="certificate-image">
-                  <img src="/udemy-certificate.jpg" alt="Udemy Certificate" />
+                  <img src={`${process.env.PUBLIC_URL}/udemy-certificate.jpg`} alt="Udemy Web Development Certificate" />
                 </div>
                 <div className="certificate-content">
                   <h3>The Complete 2024 Web Development Bootcamp</h3>
@@ -304,6 +398,29 @@ function App() {
                     </div>
                     <div className="detail-item">
                       <strong>Completed:</strong> Dec 31, 2024
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div className="certificate-item" variants={itemVariants} whileHover={{ scale: 1.02, rotateY: 5 }}>
+                <div className="certificate-image">
+                  <img src={`${process.env.PUBLIC_URL}/ethical-hacking-certificate.jpg`} alt="Ethical Hacking Certificate" />
+                </div>
+                <div className="certificate-content">
+                  <h3>The Complete Ethical Hacking Course</h3>
+                  <p className="certificate-description">Comprehensive cybersecurity certification covering ethical hacking techniques, penetration testing, and security assessment methodologies.</p>
+                  <div className="certificate-details">
+                    <div className="detail-item">
+                      <strong>Instructors:</strong> Codestars • Atil Samancioglu
+                    </div>
+                    <div className="detail-item">
+                      <strong>Platform:</strong> Udemy
+                    </div>
+                    <div className="detail-item">
+                      <strong>Duration:</strong> 41.5 hours
+                    </div>
+                    <div className="detail-item">
+                      <strong>Completed:</strong> June 17, 2025
                     </div>
                   </div>
                 </div>
