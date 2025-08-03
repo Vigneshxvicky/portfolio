@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import gradientBg from './gradient-bg.json';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaDatabase, FaAward, FaCode, FaRocket, FaShieldAlt, FaLock, FaBug, FaPython } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiRedux, SiMongodb, SiMysql, SiExpress, SiGithub, SiKalilinux, SiMetasploit, SiPython } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaDatabase, FaAward, FaCode, FaRocket } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiRedux, SiMongodb, SiMysql, SiExpress, SiGithub, SiPython } from 'react-icons/si';
 
 function App() {
   useEffect(() => {
@@ -55,9 +55,9 @@ function App() {
       </div>
 
       {/* Modern Navigation */}
-      <motion.nav className="modern-nav" initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
+      <motion.nav className="modern-nav" role="navigation" aria-label="Main navigation" initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
         <motion.div className="nav-brand" whileHover={{ scale: 1.1 }}>
-          <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vigneshxvicky" className="brand-avatar" />
+          <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vignesh K - Full Stack Developer" className="brand-avatar" />
           <span className="brand-text">Vignesh</span>
         </motion.div>
         <div className="nav-links">
@@ -70,7 +70,7 @@ function App() {
       </motion.nav>
       
       {/* Revolutionary Hero Section */}
-      <motion.section className="revolutionary-hero" initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.section className="revolutionary-hero" itemScope itemType="https://schema.org/Person" role="banner" aria-label="Hero introduction" initial="hidden" animate="visible" variants={containerVariants}>
         <div className="hero-content">
           <motion.div className="avatar-container" variants={itemVariants}>
             <div className="avatar-rings">
@@ -79,26 +79,26 @@ function App() {
               <div className="ring ring-3"></div>
             </div>
             <motion.div className="avatar-image" whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-              <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vignesh - Full Stack Developer" />
+              <img src={`${process.env.PUBLIC_URL}/ghibli-portrait.png.jpg`} alt="Vignesh K - Full Stack Developer and Cybersecurity Enthusiast" itemProp="image" />
             </motion.div>
           </motion.div>
           
           <motion.div className="hero-text" variants={itemVariants}>
-            <motion.h1 className="hero-title" whileHover={{ scale: 1.02 }}>
+            <motion.h1 className="hero-title" itemProp="name" whileHover={{ scale: 1.02 }}>
               <span className="title-line">Hello, I'm</span>
-              <span className="title-name">Vignesh</span>
-              <span className="title-profession">Full Stack Developer</span>
+              <span className="title-name" itemProp="givenName">Vignesh</span>
+              <span className="title-profession" itemProp="jobTitle">Full Stack Developer</span>
             </motion.h1>
-            <motion.p className="hero-description" variants={itemVariants}>
+            <motion.p className="hero-description" itemProp="description" variants={itemVariants}>
               Crafting digital experiences with <span className="highlight">React</span>, <span className="highlight">Node.js</span>, 
               and modern web technologies. Also passionate about <span className="highlight">cybersecurity</span> and <span className="highlight">ethical hacking</span>, 
               creating scalable, secure applications that make a difference.
             </motion.p>
             <motion.div className="hero-cta" variants={itemVariants}>
-              <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 245, 255, 0.3)" }} whileTap={{ scale: 0.95 }}>
+              <motion.a href="#projects" className="cta-primary" aria-label="View my portfolio projects" whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 245, 255, 0.3)" }} whileTap={{ scale: 0.95 }}>
                 <FaRocket /> View My Work
               </motion.a>
-              <motion.a href="/resume.pdf" download="Vignesh_Resume.pdf" className="cta-secondary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.a href="/resume.pdf" download="Vignesh_Resume.pdf" className="cta-secondary" aria-label="Download my resume" itemProp="url" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Download CV
               </motion.a>
             </motion.div>
@@ -125,9 +125,9 @@ function App() {
       <div className="modern-container">
         <AnimatePresence>
           {/* About Section - Glass Card */}
-          <motion.section id="about" className="glass-section" data-aos="fade-up" initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.section id="about" className="glass-section" role="main" aria-labelledby="about-heading" data-aos="fade-up" initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="section-header">
-              <motion.h2 className="section-title" whileHover={{ scale: 1.02 }}>
+              <motion.h2 id="about-heading" className="section-title" whileHover={{ scale: 1.02 }}>
                 <FaCode className="title-icon" />
                 About Me
               </motion.h2>
@@ -345,7 +345,7 @@ function App() {
                     <span>Network Security</span>
                     <span>Ethical Hacking</span>
                   </div>
-                  <a href="#" className="project-link">View Code</a>
+                  <a href="https://github.com/Vigneshxvicky" className="project-link">View Code</a>
                 </div>
               </motion.div>
               <motion.div className="project-item" variants={itemVariants} whileHover={{ scale: 1.03, y: -10 }}>
@@ -364,7 +364,7 @@ function App() {
                     <span>Network Discovery</span>
                     <span>Security Assessment</span>
                   </div>
-                  <a href="#" className="project-link">View Code</a>
+                  <a href="https://github.com/Vigneshxvicky" className="project-link">View Code</a>
                 </div>
               </motion.div>
             </motion.div>
